@@ -132,6 +132,7 @@ typedef enum
  */
 typedef struct tskTaskControlBlock
 {
+	//在任务切换的时候有用，此处保存ｓｐ指针
 	volatile StackType_t	*pxTopOfStack;	/*< Points to the location of the last item placed on the tasks stack.  THIS MUST BE THE FIRST MEMBER OF THE TCB STRUCT. */
 
 	#if ( portUSING_MPU_WRAPPERS == 1 )
